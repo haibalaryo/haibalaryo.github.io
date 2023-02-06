@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>備忘録:Nostr | Haibala</title>
+<meta name="description" content="Nostrについての備忘録はこちら。">
+<meta name="author" content="Nisuru Haibala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/main.css" type="text/css">
+<link rel="shortcut icon" href="data/favicon.ico" type="image/x-icon">
+    <!-- Converted by https://ao-system.net/alphaicon/ -->
+</head>
+<body>
+    <header>
+        <h1>備忘録:Nostr</h1>
+    </header>
+    
+    <p>工事中</p>
+
+    <ul>
+        <li class="li1 nospace">
+            <details>
+            <summary>公開鍵</summary>
+                npub1nhzuxyrzmhsl3ekgpkxfum7a7gh6yptxwgvfcezrc0v8kmk5mmns3g96e3
+                <input id="pubkey" type="text" value="npub1nhzuxyrzmhsl3ekgpkxfum7a7gh6yptxwgvfcezrc0v8kmk5mmns3g96e3" readonly>
+                <button onclick="copyToClipboard()">Copy text</button>
+                <!-- THanks for https://www.marorika.com/entry/copy-to-clipboard -->
+            </details>
+        </li>
+        <li class="li1">
+            <a href="https://iris.to/#/profile/npub1nhzuxyrzmhsl3ekgpkxfum7a7gh6yptxwgvfcezrc0v8kmk5mmns3g96e3">iris.to</a>
+        </li>
+    </ul>
+    <footer>
+        <p>
+            <span class="footer-copyright">
+                ©2023 Haibala
+            </span>
+            <a href="./index.html">TOP</a>
+        </p>
+    </footer>
+
+    <script>
+        function copyToClipboard() {
+            var pubkey = document.getElementById("pubkey");
+            pubkey.select();
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+            alert("コピーしたわよ : " + pubkey.value);
+        }
+    </script>
+</body>
+</html>
