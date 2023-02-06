@@ -49,8 +49,7 @@ body{
     color: gray;
 }
 .space{
-    padding: 0em 2em;/*文字周りの余白*/
-    /* display: inline-block;  /* インラインブロックにする */ */
+    padding: 0.1em 2em;
 }
 .nospace{
     padding: 0em;/*文字周りの余白*/
