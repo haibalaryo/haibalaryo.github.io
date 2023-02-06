@@ -2,6 +2,8 @@
 @font-face {
     font-family: 'migmixBold';
     src: url('../fonts/migmix-2p-20200307/migmix-2p-bold.ttf') format('truetype');
+}
+@font-face {
     font-family: 'migmixRegular';
     src: url('../fonts/migmix-2p-20200307/migmix-2p-regular.ttf') format('truetype');
 }
