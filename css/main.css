@@ -11,8 +11,15 @@
 h1 {
     color: #000000;
     font-family: 'migmixBold';
-    font-size: 48px;
+    font-size: 36px;
+    transition: all .3s;
   }
+h1:hover {
+    font-family: 'migmixBold';
+    text-decoration:none;
+    font-size: 48px;
+}
+
 h2{
     position: relative;
     padding: 0.25em 0.5em;
@@ -36,10 +43,31 @@ h3{
     background: transparent;/*背景透明に*/
     font-size: 18px;
     font-family: 'migmixBold';
+
+    transition: all .9s;
+}
+h3:hover {
+    font-family: 'migmixBold';
+    text-decoration:none;
+    font-size: 24px;
 }
 body{
     font-family: 'migmixRegular',sans-serif;
 }
+a{
+    text-decoration:none;
+    transition: all .3s;
+}
+a:hover{    /*リンクがあったら否応なくホバー追加　雑かも*/
+    color: #fff;
+    font-size:120%;
+    background-color: 	#D0E9FF;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+}
+
 .bold{
     font-family: 'migmixBold';
 }
@@ -62,3 +90,36 @@ body{
     display: inline-block;  /* インラインブロックにする */
     border: solid 3px;      /* 枠線指定 */
 }
+.round{
+    border-radius: 0.5em;/*角丸*/
+}
+.shadow4 {
+    box-shadow: 8px 8px 0.2px 0 rgb(0, 0, 0);
+}
+.shadowrotate{
+    transition: box-shadow 0.4s ease-out, transform 0.4s ease-out;
+    box-shadow: 0 12px 12px 1px #FFFFFF;
+  }
+.shadowrotate:hover{
+    box-shadow: 0 12px 12px 0.5px #D0E9FF;
+    transform: rotate(360deg);  /*ぐるぐるさせる*/
+    transition: 0.4s;
+}
+/* 
+.pophover{
+    transition: box-shadow 0.4s ease-out, transform 0.4s ease-out;
+    box-shadow: 0 12px 12px 1px #FFFFFF;
+}
+.pophover:hover{
+    box-shadow: 0 12px 12px 1px #81A2FE;
+}
+.linkbutton{
+    text-decoration:none;
+    transition: all .3s;
+}
+.linkbutton:hover{
+    color: #fff;
+    font-size:120%;
+    background-color: 	#D0E9FF;
+}
+*/
