@@ -39,14 +39,15 @@ h2:after {
     height: 0;
   }
 h3{
+    will-change: font-size,transition;
     padding: 0em 0.5em;/*上下 左右の余白*/
     background: transparent;/*背景透明に*/
     font-size: 18px;
     font-family: 'migmixBold';
-
     transition: all .9s;
 }
 h3:hover {
+    will-change: font-size;
     font-family: 'migmixBold';
     text-decoration:none;
     font-size: 24px;
