@@ -20,20 +20,16 @@ img{
 }
 h1{
     color: #000000;
-    font-family: 'migmixBold';
-    transition: all .3s;
-  }
-h1:hover {
-    font-family: 'migmixBold';
-    text-decoration:none;
-    font-size: 48px;
+}
+h1.bigtitle{
+    font-size: 36px;
 }
 h2{
     position: relative;
     padding: 0.25em 0.5em;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0); /* 黒　かっこいいので */
-    font-family: 'migmixBold';
+    background-color: #000000;
+    font-family: 'migmixRegular'; /* 'migmixBold'; */
     border-radius: 0.5em;/*角丸*/
 }
 h2:after {
@@ -50,40 +46,38 @@ h3{
     will-change: font-size,transition;
     padding: 0em 0.5em;/*上下 左右の余白*/
     background: transparent;/*背景透明に*/
-    font-size: 18px;
-    font-family: 'migmixBold';
+    font-family: 'migmixRegular';
     transition: all .9s;
 }
 h3:hover{
     will-change: font-size;
-    font-family: 'migmixBold';
     text-decoration:none;
-    font-size: 24px;
+    font-size: 18px;
 }
 body{
+    color: #282c37;
     font-family: 'migmixRegular',sans-serif;
 }
 body.centertext{
     margin: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;  /* 中央寄せ */
+    width: 90%;  /* 中央寄せ */
     max-width: 512px;   /* max-widthでレスポンシブ対応 */
 }
 body.article{
     margin: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;  /* 中央寄せ */
+    width: 90%;  /* 中央寄せ */
     max-width: 960px;
 }
 a{
     text-decoration:none;
     transition: all .3s;
 }
-a:not(.noeffect):hover{    /*リンクがあったら否応なくホバー追加　雑かも*/
+a:not(.noeffect):hover{    /*リンクホバー追加　.noeffectを除く*/
     color: #fff;
-    font-size:120%;
     background-color: 	#D0E9FF;
 }
 /* :not で共有ボタン横に記号表示されるの回避 :notが連続してるの気持ち悪い */
@@ -104,7 +98,8 @@ code{
 }
 .icon{
     width: 100px;
-    height: 100px;
+    max-width: 32%;
+    height: auto;
 }
 .bold{
     font-family: 'migmixBold';
@@ -121,6 +116,9 @@ code{
 .updated-date{
     font-size: small;
     color: black;
+}
+.font-bold{
+    font-family: 'migmixBold';
 }
 .footer-copyright{
     font-size: small;
@@ -153,11 +151,10 @@ code{
     transform: rotate(360deg);  /*ぐるぐるさせる*/
     transition: 0.4s;
 }
-.bigtitle{
-    font-size: 36px;
-}
 .pixivlogo{
-    min-width: 24px;
+    min-width: 24px;    /* 24px以下にしない */
+    width: 8%;  /* デカすぎた */
+    max-width: 32px;
     height:auto;
 }
 /* 
