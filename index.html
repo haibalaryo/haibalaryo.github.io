@@ -10,27 +10,35 @@
 <link rel="stylesheet" href="./css/main.css" type="text/css">
 <link rel="shortcut icon" href="data/favicon.ico" type="image/x-icon">
     <!-- Converted by https://ao-system.net/alphaicon/ -->
+<script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <!-- APロゴ表示用のstylesheet。FontAwesomeと一部競合。-->
 </head>
-<body>
+<body class="centertext"><!-- 中央寄せ -->
     <header>
-        <h1><img class="icon round shadowrotate" src="data/icon.png" alt="Haibala icon" width="128px" onclick="alert('なんで触ったんですか？変態さんですか？')">
+        <p class="updated-date">更新：<time id="modify"></time></p>
+        <h1 class="bigtitle"><img class="icon round shadowrotate" src="data/icon.png" alt="Haibala icon" width="128px" onclick="alert('なんで触ったんですか？変態さんですか？')">
         Haibala</h1>
+        <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="noeffect" href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/ani1/61/1676526865/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+        <td><a class="noeffect" href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/ani2/61/1676526865/" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
+            <!-- アクセスカウンター -->
+        <p>Visits</p>
     </header>
     
     <h2>アカウント</h2>
-    <h3>Twitter</h3>
+    <h3><i class="fab fa-twitter"></i> Twitter</h3>
     <ul>
         <li class="li1 linkbutton">
             <a rel="me" href="https://twitter.com/@_haibala_">@_haibala_　</a><a href="https://twitter.com/_haibala_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-lang="ja" data-show-count="false">　Follow @_haibala_　</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </li>
     </ul>
-        <h3>Discord</h3>
+        <h3><i class="fa fa-discord" aria-hidden="true"></i> Discord</h3>
     <ul>
         <li class="li1">
             はいばら#2742
         </li>
     </ul>
-    <h3>Nostr</h3>
+    <h3><i class="fa fa-paper-plane" aria-hidden="true"></i> Nostr</h3>
     <p class="space">TwitterやMastodonに似た分散型SNS</p>
     <ul>
         <li class="li1 nospace">
@@ -46,16 +54,24 @@
             <a href="https://iris.to/#/profile/npub1nhzuxyrzmhsl3ekgpkxfum7a7gh6yptxwgvfcezrc0v8kmk5mmns3g96e3">iris.to</a>
         </li>
     </ul>
-    <h3>Fediverse</h3>
+    <h3><i class="fa fa-activitypub" aria-hidden="true"></i> Fediverse</h3>
     <p class="space">MastodonとMisskey（どちらもTwitterみたいなSNS）</p>
     <ul>
         <li class="li1">
             <a rel="me" href="https://odakyu.app/@h">@h@odakyu.app</a>
-            メイン
+            <ul>
+                <li class="li2">
+                    <p>main</p>
+                </li>
+            </ul>
         </li>
         <li class="li1">
             <a rel="me" href="https://mk.yopo.work/@haibala">@haibala@mk.yopo.work</a>
-            サブ
+            <ul>
+                <li class="li2">
+                    <p>sub</p>
+                </li>
+            </ul>
         </li>
         <li class="li1">
             <a rel="me" href="https://iyasaretai.pw/@haibala">@haibala@iyasaretai.pw</a>
@@ -71,15 +87,27 @@
         </li>
         <li class="li1">
             <a href="https://mastodon-japan.net/@haibala">@haibala@mastodon-japan.net</a>
-            ROM専
+            <ul>
+                <li class="li2">
+                    <p>ROM専</p>
+                </li>
+            </ul>
         </li>
         <li class="li1">
             <a rel="me" href="https://pawoo.net/@haibala2020">@haibala2020@pawoo.net</a>
-            ROM専
+            <ul>
+                <li class="li2">
+                    <p>ROM専</p>
+                </li>
+            </ul>
         </li>
         <li class="li1">
             <a href="https://social.vivaldi.net/@nhaibala">@nhaibala@vivaldi.net</a>
-            ROM専　URLはsocialが付くので注意
+            <ul>
+                <li class="li2">
+                    <p>ROM専　URLはsocialが付くので注意</p>
+                </li>
+            </ul>
         </li>
         <li class="li1">
             <a href="https://honi.club/@haibala">@haibala@honi.club</a>
@@ -87,27 +115,26 @@
     </ul>
     <p class="space">など</p>
 
-    <h3>Pixiv</h3>
+    <h3><img class="pixivlogo" src="./data/pixiv_logo_icon_r.png" width="10px"> pixiv</h3>  <!-- ピクシブは小文字 -->
     <ul>
         <li class="li1">
             <a href="https://www.pixiv.net/users/46726155">輩原(はいばら)</a>
             <p class="space">気まぐれで更新してます</p>
         </li>
     </ul>
-    <h3>GitHub</h3>
+    <h3><i class="fa-brands fa-github"></i> GitHub</h3>
     <ul>
         <li class="li1">
             <a href="https://github.com/haibalaryo">@haibalaryo </a>
-            <p class="space">プログラマーではないです　何も上げてません</p>
         </li>
     </ul>
-    <h3>Annict</h3>
+    <h3><i class="fa fa-check-square" aria-hidden="true"></i> Annict</h3>
     <ul>
         <li class="li1">
             <a href="https://annict.com/@NISURU">@NISURU</a>
         </li>
     </ul>
-    <h3>Twitcasting</h3>
+    <h3><i class="fa-solid fa-tower-cell"></i> Twitcasting</h3>
     <ul>
         <li class="li1">
             <a href="https://twitcasting.tv/c:halaryo">@c:halaryo
@@ -135,19 +162,23 @@
     <p class="space"><del>異常成人男性</del>　しがない大学生。20↑</p>
     <h2>備忘録</h2>
     <ul>
+    </a>
         <li class="li1">
-            <a href="./nostr.html">Nostr(工事中)</a>
+            <a class="local" href="./redirect-https.html">Cloudflareでhttpsにリダイレクトする方法</a>
+        </li>
+        <li class="li1">
+            <a class="local" href="./nostr.html">Nostr(工事中)</a>
         </li>
     </ul>
     <h2>つぶやき</h2>
     <!-- Twitterタイムライン埋め込み -->
-    <a class="twitter-timeline" data-lang="ja" data-width="500" data-height="400" data-theme="light" href="https://twitter.com/_haibala_?ref_src=twsrc%5Etfw">
+    <a class="twitter-timeline" data-lang="ja" data-width="500" data-height="300" data-theme="light" href="https://twitter.com/_haibala_?ref_src=twsrc%5Etfw">
         Tweets by _haibala_
     </a> 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- MisskeyとMastodonの埋め込み -->
-    <ins data-title="mk.yopo.work" data-acct="haibala@mk.yopo.work" data-limit="30"></ins>
-    <ins data-title="odakyu.app" data-acct="h@odakyu.app" data-limit="50"></ins>
+    <ins data-title="mk.yopo.work" data-acct="haibala@mk.yopo.work" data-height="300px" data-limit="30"></ins>
+    <ins data-title="odakyu.app" data-acct="h@odakyu.app" data-height="300px" data-limit="50"></ins>
     <script src="https://notestock.osa-p.net/_js/notestock_widget.js" defer></script>
 
     <ul class="square linkbutton"><!-- AddToAny Share button -->
@@ -178,6 +209,15 @@
             document.execCommand("Copy");
             alert("コピーしたわよ : " + pubkey.value);
         }
+
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
     </script>
 </body>
 </html>

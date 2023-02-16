@@ -7,11 +7,17 @@
     font-family: 'migmixRegular';
     src: url('../fonts/migmix-2p-20200307/migmix-2p-regular.ttf') format('truetype');
 }
-
-h1 {
+@font-face {
+    font-family: 'FiraCodeRegular';
+    src: url('../fonts/Fira_Code_v6.2/ttf/FiraCode-Regular.ttf') format('truetype');
+}
+img{
+    max-width: 100%; /* スマホで表示時に画像のはみ出しを防止 */
+    height:auto;
+}
+h1{
     color: #000000;
     font-family: 'migmixBold';
-    font-size: 36px;
     transition: all .3s;
   }
 h1:hover {
@@ -19,7 +25,6 @@ h1:hover {
     text-decoration:none;
     font-size: 48px;
 }
-
 h2{
     position: relative;
     padding: 0.25em 0.5em;
@@ -46,7 +51,7 @@ h3{
     font-family: 'migmixBold';
     transition: all .9s;
 }
-h3:hover {
+h3:hover{
     will-change: font-size;
     font-family: 'migmixBold';
     text-decoration:none;
@@ -55,25 +60,62 @@ h3:hover {
 body{
     font-family: 'migmixRegular',sans-serif;
 }
+body.centertext{
+    margin-left: auto;
+    margin-right: auto;
+    width: 32%;  /* 中央寄せ */
+    max-width: 100%;
+}
+body.article{
+    margin-left: auto;
+    margin-right: auto;
+    width: 64%;  /* 中央寄せ */
+    max-width: 100%;
+}
 a{
     text-decoration:none;
     transition: all .3s;
 }
-a:hover{    /*リンクがあったら否応なくホバー追加　雑かも*/
+a:not(.noeffect):hover{    /*リンクがあったら否応なくホバー追加　雑かも*/
     color: #fff;
     font-size:120%;
     background-color: 	#D0E9FF;
+}
+/* :not で共有ボタン横に記号表示されるの回避 :notが連続してるの気持ち悪い */
+a:not(.noeffect):not([href^="https://haibala.com/"]):not(.local):not(.a2a_button_facebook):not(.a2a_button_twitter):not(.a2a_button_mastodon):not(.a2a_dd):before{    /* リンク横に記号追加 */
+    margin: 0 3px;
+    font-family: FontAwesome;
+    vertical-align: middle;
+    content: '\f0c1';
+}
+code{
+    display: inline-block;
+    font-family: 'FiraCodeRegular','migmixRegular';
+    font-size: smaller;
+    color: white;
+    background-color: #282c37;
+    padding: 0.25em 0.5em;
+    border-radius: 0.2em;
 }
 .icon{
     width: 100px;
     height: 100px;
 }
-
 .bold{
     font-family: 'migmixBold';
 }
 .li1{
     color: darkslategray;
+}
+.li2{
+    color: darkslategray;
+    font-size: x-small;
+    margin: 0 0 0 0.5em;
+    padding: 0;
+}
+.updated-date{
+    font-size: small;
+    color: black;
 }
 .footer-copyright{
     font-size: small;
@@ -105,6 +147,13 @@ a:hover{    /*リンクがあったら否応なくホバー追加　雑かも*/
     box-shadow: 0 12px 12px 0.5px #D0E9FF;
     transform: rotate(360deg);  /*ぐるぐるさせる*/
     transition: 0.4s;
+}
+.bigtitle{
+    font-size: 36px;
+}
+.pixivlogo{
+    min-width: 24px;
+    height:auto;
 }
 /* 
 .pophover{
