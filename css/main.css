@@ -96,7 +96,7 @@ a.gray{ /* 目次用 */
     font-family: 'migmixRegular';
 }
 code{
-    width: 80%;
+    width: 90%; /* あまり細いと小型端末で見えづらい */
     max-width: 960px;
     display: inline-block;
     font-family: 'FiraCodeRegular','migmixRegular';
@@ -105,8 +105,6 @@ code{
     background-color: #282c37;
     padding: 0.1em 0.2em;
     border-radius: 0.5em;
-}
-code.flow{
     overflow-x: scroll;
 }
 code.instring{
