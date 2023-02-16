@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>MFMチートシート｜Haibala</title>
+    <!-- MFMで遊んでいると人生が何年あっても足りなくなりそう -->
+<meta name="description" content="自分用Misskey文字修飾チートシート">
+<meta name="author" content="Nisuru Haibala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/main.css" type="text/css">
+<link rel="shortcut icon" href="data/favicon.ico" type="image/x-icon">
+    <!-- Converted by https://ao-system.net/alphaicon/ -->
+<link rel= "stylesheet" href="./css/prism.css">
+    <!-- For highlight codes -->
+<script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
+</head>
+<body class="article">  <!-- 記事なので少し幅広の中央寄せ -->
+    <header>
+        <p class="updated-date">更新：<time id="modify"></time></p>
+            <!-- 更新日の表示 -->
+        <h1>MFMチートシート</h1>
+    </header>
+
+    <h2>参考</h2>
+    <ol>
+        <li><a href="https://misskey-hub.net/docs/features/mfm.html">Misskey Hub</a></li>
+        <li><a href="https://github.com/misskey-dev/mfm.js">github.com/misskey-dev/mfm.js</a></li>
+        <li><a href="https://misskey.io/@hakohako_f2/pages/mfm-tech">📃MFMアートのちょっとした技など </a>(by @hakohako_f2@misskey.io)</li>
+        <li><a href="https://misskey.io/channels/8gepazrpag">MFMアート部</a></li>
+    </ol>
+    <div class="card">
+        <h3>TIPS:</h3>
+        <p class="space">
+            乱用して公開投稿をすると閲覧している人々の迷惑となるほか、ブロックやミュートをされることがある。
+        </p>
+        </div>
+    <ol id="box">
+            <li><span class="roundborder">1</span><a href="#chapter1" class="noeffect gray">強調</a></li>
+            <ol class="child_ol">
+                <li><a href="#bold" class="noeffect">太字</a></li>
+                <li><a href="#size" class="noeffect">サイズ変更</a></li>
+                <li><a href="#font" class="noeffect">フォント指定</a></li>
+                <li><a href="#center" class="noeffect">中央寄せ</a></li>
+                <li><a href="#flip" class="noeffect">反転</a></li>
+                <li><a href="#deg" class="noeffect">角度指定</a></li>
+            </ol>
+            <li><span class="roundborder">2</span><a href="#chapter2" class="noeffect gray">文字列を動かす</a></li>
+            <ol class="child_ol">
+                <li><a href="#rotate" class="noeffect">回転</a></li>
+                <li><a href="#zoom" class="noeffect">拡大縮小</a></li>
+                <li><a href="#shake" class="noeffect">振動</a></li>
+            </ol>
+            <li><span class="roundborder">3</span><a href="#chapter3" class="noeffect gray">装飾</a></li>
+            <ol class="child_ol">
+                <li><a href="#plane" class="noeffect">プレーン</a></li>
+                <li><a href="#code" class="noeffect">コード</a></li>
+                <li><a href="#sparkle" class="noeffect">キラキラ</a></li>
+                <li><a href="#blur" class="noeffect">ぼかし</a></li>
+                <li><a href="#rainbow" class="noeffect">虹色</a></li>
+                <li><a href="#color" class="noeffect">色</a></li>
+                <li><a href="#position" class="noeffect">位置</a></li>
+                <li><a href="#scale" class="noeffect">変形</a></li>
+            </ol>
+            <!-- <li><span class="roundborder">4</span><a href="#" class="noeffect gray">v13で使用不可のMFM</a></li> -->
+    </ol>
+
+    <h2 id="chapter1">1. 強調</h2>  <!-- id内部には # 不要 -->
+    <h3 id="bold">太字</h3>
+    <pre><code>
+    **太字**      
+    </code></pre>
+    <h3 id="size">サイズ変更</h3>
+    <pre><code> <!-- エスケープすること -->
+    &lt;small&gt;小さく&lt;/small&gt;
+    $[x2 ２倍]
+    $[x3 ３倍]
+    $[x4 ４倍]
+    </code></pre>
+    <p class="space">
+        smallは小さくなるだけでなく色も薄くなる。重ねて使うこともできる。
+    </p>
+    <pre><code>
+    &lt;small&gt;&lt;small&gt;更に小さく&lt;/small&gt;&lt;/small&gt;
+    $[x2 $[x3 ２倍と３倍]]
+    </code></pre>
+    <h3 id="font">フォント指定</h3>
+    <pre><code>
+    $[font.serif 明朝体]
+    $[font.monospace 等幅フォント]
+    $[font.cursive 草書体（筆記体）]
+    $[font.fantasy 装飾的]
+    </code></pre>
+    <p class="space">
+        serif以外は環境次第。
+    </p>
+    <h3 id="center">中央寄せ</h3>
+    <pre><code>
+    &lt;center&gt;小さく&lt;/center&gt;
+    </code></pre>
+    <h3 id="flip">反転</h3>
+    <pre><code>
+    $[flip 左右反転]
+    $[flip.v 上下反転]
+    $[flip.h,v 上下左右反転]
+
+    $[scale.x=-1 scaleを用いてもできる]
+    </code></pre>
+    <h3 id="deg">角度指定</h3>
+    <pre><code>
+    $[rotate 90度傾ける]
+    $[rotate.deg=30 30度右に傾ける]
+    </code></pre>
+
+    <h2 id="chapter2">2. 文字列を動かす</h2>
+    <h3 id="rotate">回転</h3>
+    <pre><code>
+    $[spin z軸回転(画面の平面上)]
+    $[spin.x x軸回転(縦)]
+    $[spin.y y軸回転(横)]
+    $[spin.z z軸回転]
+
+    $[spin.left 左回転]
+    $[spin.z,speed=10s 10秒間に1回z軸回転]
+    </code></pre>
+    <h3 id="zoom">拡大縮小</h3>
+    <pre><code>
+    $[tada 拡大縮小]
+    $[jelly ゼリーみたいに潰れる]
+    $[bounce 飛び跳ねたり潰れたり]
+    </code></pre>
+    <p class="space">
+        これらも.speed=XXsを付けると周期が指定できる。
+    </p>
+    <h3 id="shake">振動</h3>
+    <pre><code>
+    $[jump 跳ねる]
+    $[shake ブルブル振動]
+    $[twitch 動き回る]
+    $[twitch.speed=10s 10秒1周期で動き回る]
+    </code></pre>
+
+    <h2 id="chapter3">3. 装飾</h2>
+    <h3 id="plane">プレーン</h3>
+    <pre><code>
+    &lt;plane&gt;$[x2 文字装飾は無効になる]&lt;plane&gt;
+    </code></pre>
+    <h3 id="code">コード</h3>
+    <pre><code>
+    `インライン`
+    </code></pre>
+    <pre><code>
+    ```
+    ブロック
+    ```
+    </code></pre>
+    <p class="space">
+        Markdownと同様。バッククォートという記号で、スマホではキーボードから直接入力できない場合が多いので、頻繁に使う場合はユーザー辞書登録するなど。
+    </p>
+    <h3 id="sparkle">キラキラ</h3>
+    <pre><code>
+    $[sparkle キラキラ]
+    </code></pre>
+    <h3 id="blur">ぼかし</h3>
+    <pre><code>
+    $[blur えっちなワード]
+    </code></pre>
+    <h3 id="rainbow">虹色</h3>
+    <pre><code>
+    $[rainbow 虹色]
+    </code></pre>
+    <p class="space">
+        <del>元の文字が白色や黒色だと虹色に見えない。</del>
+    </p>
+    <h3 id="color">色</h3>
+    <h4>文字色</h4>
+    <pre><code>
+    $[fg.color=red 赤（色名指定）]
+    $[fg.color=FF0000 赤（色コード指定）]
+    </code></pre>
+    <h4>背景色</h4>
+    <pre><code>
+    $[bg.color=red 背景を赤に]
+    </code></pre>
+    <p class="space">
+        文字列の代わりに<code class="instring">:blank:</code>を入れると色付きの背景だけを表示できる。これを<code class="instring">$[scale ]</code>等と組み合わせると様々な図形が作れる。
+    </p>
+    <h3 id="position">位置</h3>
+    <pre><code>
+    $[position.x=.1,y=.1 (x,y)=(1,1)に移動]
+    </code></pre>
+    <h3 id="scale">変形</h3>
+    <pre><code>
+    $[scale.x=2 x方向(横)に2倍]
+    $[scale.y=10 y方向(縦)に10倍]
+    $[scale.x=4,y=4 x,y方向にそれぞれ4倍]←むっちゃ迷惑
+    </code></pre>
+    <p class="space">
+        小数点以下のみの場合は0を省略できる。
+    </p>
+    <pre><code>
+    $[scale.x=.5 x方向に0.5倍]
+    </code></pre>
+    <p class="space">
+        これを<code class="instring">$[rotate ]</code>と組み合わせるとふれすとさんのような投稿ができる。
+    </p>
+    <pre><code class="flow">
+    $[position.x=4 $[rotate.deg=-60 $[scale.x=2.23 $[rotate.deg=45  :ablobcatfloofpat: ]]]]
+    </code></pre>
+
+    <h2>4. v13で使用不可のMFM</h2>
+    <h3>斜体</h3>
+    <pre><code>
+    *斜体*      
+    </code></pre>
+    <p class="space">
+        Markdownのそれと同じ機能。環境に依るが、基本的に日本語は斜体にならない。
+    </p>
+
+    <div class="card">
+    <p class="space">
+        更新中<!-- KaTeXとKaTeX廃止に伴って追加されたMFMを追加予定。情報は<code class="instring">@haibala@mk.yopo.work</code>までお願いします。 -->
+    </p>
+    </div>
+
+    <ul class="square linkbutton"><!-- AddToAny Share button -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_mastodon">
+                <img src="https://icongr.am/simple/mastodon.svg?color=06559d" border="0" alt="Mastodon" width="32">
+            </a>
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        </div>
+        
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+    </ul>
+    <script src="https://utteranc.es/client.js"
+        repo=" haibalaryo.github.io haibalaryo/haibalaryo.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <footer>
+        <p>
+            <span class="footer-copyright">
+                ©2023 Haibala
+            </span>
+            <a class="local" href="./index.html">HOME
+            </a>
+        </p>
+    </footer>
+    <script>
+
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+    </script>
+</body>
+</html>

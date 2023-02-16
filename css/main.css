@@ -11,7 +11,7 @@
     font-family: 'FiraCodeRegular';
     src: url('../fonts/Fira_Code_v6.2/ttf/FiraCode-Regular.ttf') format('truetype');
 }
-img{
+img:not(.default):{
     margin: auto;
     width: 88%; /* スマホで表示時に画像のはみ出しを防止 *//* bodyより大きいとoverflow */
     max-width: 960px;
@@ -46,13 +46,18 @@ h3{
     will-change: font-size,transition;
     padding: 0em 0.5em;/*上下 左右の余白*/
     background: transparent;/*背景透明に*/
+    font-size: 18px;
     font-family: 'migmixRegular';
     transition: all .9s;
 }
-h3:hover{
+h3.hover:hover{
     will-change: font-size;
     text-decoration:none;
-    font-size: 18px;
+    font-size: 20px;
+}
+h4{
+    font-family: 'migmixRegular';
+    font-size: 16px;
 }
 body{
     color: #282c37;
@@ -60,26 +65,22 @@ body{
 }
 body.centertext{
     margin: auto;
-    margin-left: auto;
-    margin-right: auto;
     width: 90%;  /* 中央寄せ */
     max-width: 512px;   /* max-widthでレスポンシブ対応 */
 }
 body.article{
     margin: auto;
-    margin-left: auto;
-    margin-right: auto;
     width: 90%;  /* 中央寄せ */
     max-width: 960px;
 }
-p{
-    overflow-y: scroll;
-}
+/* p{ */
+    /* overflow-y: scroll; *//* 不要 */
+/* } */
 a{
     text-decoration:none;
     transition: all .3s;
 }
-a:not(.noeffect):hover{    /*リンクホバー追加　.noeffectを除く*/
+a:not(.noeffect):not(.gray):hover{    /*リンクホバー追加　.noeffectを除く*/
     color: #fff;
     background-color: 	#D0E9FF;
 }
@@ -90,14 +91,69 @@ a:not(.noeffect):not([href^="https://haibala.com/"]):not(.local):not(.a2a_button
     vertical-align: middle;
     content: '\f0c1';
 }
+a.gray{ /* 目次用 */
+    color: #282c37;
+    font-family: 'migmixRegular';
+}
 code{
+    width: 80%;
+    max-width: 960px;
     display: inline-block;
     font-family: 'FiraCodeRegular','migmixRegular';
     font-size: smaller;
     color: white;
     background-color: #282c37;
-    padding: 0.25em 0.5em;
-    border-radius: 0.2em;
+    padding: 0.1em 0.2em;
+    border-radius: 0.5em;
+}
+code.flow{
+    overflow-x: scroll;
+}
+code.instring{
+    width: auto;
+    display: inline-block;
+    padding: 0.2em 0.4em;
+}
+div.card{
+    margin: 15px;
+    width:85%;
+    max-width: 832px;
+    height:auto;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px 1px #a1b1d1;
+    box-sizing: border-box;
+    border-radius: 1em;
+}
+ol {
+    list-style: none;
+}
+#box {
+    margin: auto;
+    width: 320px;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px 1px #a1b1d1;
+    box-sizing: border-box;
+    border-radius: 1em;
+}
+#box li {
+    margin-top: 1px;
+    margin-left: 25px;
+}
+span.roundborder{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 2.5px 4px 0 0;
+    padding-top: 2.5px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #282c37;
+    background-color: #282c37;
+    box-sizing: border-box;
+    color: #FFFFFF;
 }
 .icon{
     width: 100px;
