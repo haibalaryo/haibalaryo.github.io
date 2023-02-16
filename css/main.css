@@ -61,16 +61,18 @@ body{
     font-family: 'migmixRegular',sans-serif;
 }
 body.centertext{
+    margin: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 32%;  /* 中央寄せ */
-    max-width: 100%;
+    width: 100%;  /* 中央寄せ */
+    max-width: 512px;   /* max-widthでレスポンシブ対応 */
 }
 body.article{
+    margin: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 64%;  /* 中央寄せ */
-    max-width: 100%;
+    width: 100%;  /* 中央寄せ */
+    max-width: 960px;
 }
 a{
     text-decoration:none;
