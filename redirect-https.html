@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Cloudflareでhttpsにリダイレクトする方法｜Haibala</title>
+<meta name="description" content="Cloudflareのページルールを使ってhttpsにリダイレクトさせる方法。">
+<meta name="author" content="Nisuru Haibala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/main.css" type="text/css">
+<link rel="shortcut icon" href="data/favicon.ico" type="image/x-icon">
+    <!-- Converted by https://ao-system.net/alphaicon/ -->
+<script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
+</head>
+<body class="article">  <!-- 記事なので少し幅広の中央寄せ -->
+    <header>
+        <p class="updated-date">更新：<time id="modify"></time></p>
+            <!-- 更新日の表示 -->
+        <h1>Cloudflareでhttpsにリダイレクトする方法</h1>
+    </header>
+
+    <h2>場面</h2>
+    <p class="space">
+        Github Pages等で立ち上げてCloudflareで自分のドメインと紐づけたウェブサイトが、httpで始まるURLで見れてしまうので"https..."にリダイレクトさせたい。
+    </p>
+
+    <h2>解決策</h2>
+    <p class="space">
+        ページルールを使う。
+    </p>
+
+    <h3>1. ルール＞ページルールを開く</h3>
+    <p class="space">
+        <a href="https://dash.cloudflare.com/">Cloudflare</a>を開いて、リダイレクトを設定したいドメインを選びます。（写真の場合は<code>haibala.com</code>）
+    </p>
+    <img src="data/redirect-https/cloudflare_top.png" alt="リダイレクトを設定したいドメインを選ぶ" width="500px">
+    <p class="space">
+        左のメニューからルール＞ページルールを選びます。
+    </p>
+    <img src="data/redirect-https/cloudflare_rules.png" alt="ルールからページルールを選ぶ" width="500px">
+    <p class="space">
+        右側の「ページルールを作成」のボタンを選びます。
+    </p>
+    <h3>2. ページルールを作成する</h3>
+    <p class="space">
+        URLには<code>http://</code>と自分のドメインを組み合わせたものを入力します。設定の選択から"URLの転送"を選び、転送先URLに<code>https://</code>と自分のドメインを組み合わせたものを入力します。
+    </p>
+    <img src="data/redirect-https/cloudflare_rulessettings.png" alt="ページルールを作成する" width="500px">
+    <p class="space">
+        ステータスコードは永久リダイレクトにしておきます。
+    </p>
+    <h3>3. リダイレクトされているか確かめる</h3>
+    <p class="space">
+        これで設定は完了したので、適当なブラウザでアドレスバーに<code>http://</code>+<code>(自分のドメイン)</code>を入力して、自動的に<code>https://...</code>に変わるかを確かめます。
+    </p>
+
+    <!-- 備考ってこの場合h2とh3のどちらにするか迷う -->
+    <h2>備考</h2>
+    <p class="space">
+        リダイレクトに設定してSSL/TLSもフレキシブルにしたのに、どうしてGithub Pagesでhttps化が選べないんでしょうか（泣）<br>
+        有識者さん助けてください。
+    </p>
+    <img src="data/redirect-https/githubpages_https.png" alt="Github PagesでEnforce HTTPが選べない件" width="500px">
+    <p class="space">
+
+    <ul class="square linkbutton"><!-- AddToAny Share button -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_mastodon">
+                <img src="https://icongr.am/simple/mastodon.svg?color=06559d" border="0" alt="Mastodon" width="32">
+            </a>
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        </div>
+        
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+    </ul>
+    <footer>
+        <p>
+            <span class="footer-copyright">
+                ©2023 Haibala
+            </span>
+            <a class="local" href="./index.html">HOME
+            </a>
+        </p>
+    </footer>
+    <script>
+
+        /* 更新日の取得 */
+        const last = new Date(document.lastModified);
+        const year = last.getFullYear();
+        const month = last.getMonth() + 1;
+        const date = last.getDate();
+        /* 日付を書き換える */
+        const target = document.getElementById('modify');
+        target.textContent = year + '-' + month + '-' + date;
+    </script> 
+</body>
+</html>
