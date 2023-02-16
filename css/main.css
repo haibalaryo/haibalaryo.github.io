@@ -13,8 +13,8 @@
 }
 img{
     margin: auto;
-    width: 100%; /* スマホで表示時に画像のはみ出しを防止 */
-    max-width: 704px;
+    width: 88%; /* スマホで表示時に画像のはみ出しを防止 *//* bodyより大きいとoverflow */
+    max-width: 960px;
     height:auto;
     max-height: 832px;
 }
@@ -71,6 +71,9 @@ body.article{
     margin-right: auto;
     width: 90%;  /* 中央寄せ */
     max-width: 960px;
+}
+p{
+    overflow-y: scroll;
 }
 a{
     text-decoration:none;
