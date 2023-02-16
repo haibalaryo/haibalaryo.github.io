@@ -12,8 +12,11 @@
     src: url('../fonts/Fira_Code_v6.2/ttf/FiraCode-Regular.ttf') format('truetype');
 }
 img{
-    max-width: 100%; /* スマホで表示時に画像のはみ出しを防止 */
+    margin: auto;
+    width: 100%; /* スマホで表示時に画像のはみ出しを防止 */
+    max-width: 704px;
     height:auto;
+    max-height: 832px;
 }
 h1{
     color: #000000;
