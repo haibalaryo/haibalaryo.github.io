@@ -29,6 +29,14 @@ img.logo{
     max-width: 256px;
     height:auto;
 }
+img.pixivlogo{
+    margin: auto;
+    min-width: 24px;    /* 24px以下にしない */
+    width: 8%;  /* デカすぎた */
+    max-width: 32px;
+    height:auto;
+    max-height: 32px;
+}
 h1{
     color: #000000;
 }
@@ -233,12 +241,6 @@ span.roundborder{
     box-shadow: 0 12px 12px 0.5px #D0E9FF;
     transform: rotate(360deg);  /*ぐるぐるさせる*/
     transition: 0.4s;
-}
-.pixivlogo{
-    min-width: 24px;    /* 24px以下にしない */
-    width: 8%;  /* デカすぎた */
-    max-width: 32px;
-    height:auto;
 }
 /* 
 .pophover{
