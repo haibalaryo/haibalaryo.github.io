@@ -122,6 +122,7 @@ code.instring{
     width: auto;
     display: inline-block;
     padding: 0.2em 0.4em;
+    overflow-x: auto;
 }
 div.card{
     margin: 15px;
