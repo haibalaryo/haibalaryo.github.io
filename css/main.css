@@ -11,12 +11,23 @@
     font-family: 'FiraCodeRegular';
     src: url('../fonts/Fira_Code_v6.2/ttf/FiraCode-Regular.ttf') format('truetype');
 }
-img:not(.default):{
+details {
+    border-left:5px solid #c0e2fb;  /* #c0e2fb is main color of Haibala. */
+    padding:2px 8px;
+}
+figure{text-align:center;}
+figcaption{color:grey;font:10px ;}
+img:not(.default){
     margin: auto;
     width: 88%; /* スマホで表示時に画像のはみ出しを防止 *//* bodyより大きいとoverflow */
     max-width: 960px;
     height:auto;
     max-height: 832px;
+}
+img.logo{
+    width: 64%;
+    max-width: 256px;
+    height:auto;
 }
 h1{
     color: #000000;
@@ -123,9 +134,23 @@ div.card{
     box-sizing: border-box;
     border-radius: 1em;
 }
+div.logo{
+    padding: 2em 2em;
+    margin: auto;
+    text-align:center;
+}
 ol {
     list-style: none;
 }
+li.parallel {   /* align images */
+    list-style:none;
+    display:inline-block;
+    padding:10px 0;
+    width:400px;
+    height:auto;
+    vertical-align:middle;
+    text-align:center;
+    }
 #box {
     margin: auto;
     width: 320px;

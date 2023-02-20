@@ -13,12 +13,27 @@
 <script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
     <!-- APロゴ表示用のstylesheet。FontAwesomeと一部競合。-->
+<!-- ogp start -->
+<meta property="og:description" content="輩原にするの自己紹介、各サービスアカウント、備忘録はこちら。">
+<meta property="og:title" content="Haibala">
+<meta property="og:image" content="https://haibala.com/data\ogp-light.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haibala.com/">
+<!-- ogp end -->
 </head>
 <body class="centertext"><!-- 中央寄せ -->
     <header>
+        <div class="logo">
+            <a class="noeffect" href="https://haibala.com/"><img class="logo" src="./data/logo/Haibalacom_b.png" alt="Haibala.com logo"></a>
+        </div>
+        <div class="logo">
+            <img class="icon round shadowrotate default" src="data/icon.png" alt="Haibala icon" width="128px" onclick="alert('なんで触ったんですか？変態さんですか？')">
+        </div>
         <p class="updated-date">更新：<time id="modify"></time></p>
-        <h1 class="bigtitle font-bold"><img class="icon round shadowrotate default" src="data/icon.png" alt="Haibala icon" width="128px" onclick="alert('なんで触ったんですか？変態さんですか？')">
-        Haibala</h1>
+        <h1 class="bigtitle font-bold">
+        Home</h1>
         <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="noeffect" href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/ani1/61/1676526865/" class="default" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
         <td><a class="noeffect" href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/ani2/61/1676526865/" class="default" alt="アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
             <!-- アクセスカウンター -->
@@ -162,12 +177,11 @@
     <p class="space"><del>異常成人男性</del>　しがない大学生。20↑</p>
     <h2>備忘録</h2>
     <ul>
-    </a>
         <li class="li1">
             <a class="local" href="./redirect-https.html">Cloudflareでhttpsにリダイレクトする方法</a>
         </li>
         <li class="li1">
-            <a class="local" href="./mfm-cheetsheet.html">MFMチートシート(工事中)</a>
+            <a class="local" href="./mfm-cheetsheet.html">MFMチートシート</a>
         </li>
         <li class="li1">
             <a class="local" href="./nostr.html">Nostr(工事中)</a>
@@ -203,7 +217,11 @@
             </span>
         </p>
     </footer>
-
+    <!-- Easy darkmode js -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      new Darkmode().showWidget();
+    </script>
     <script>
         function copyToClipboard() {
             var pubkey = document.getElementById("pubkey");

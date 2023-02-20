@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
-<title>MFMチートシート｜Haibala</title>
+<title>MFMチートシート | Haibala</title>
     <!-- MFMで遊んでいると人生が何年あっても足りなくなりそう -->
 <meta name="description" content="自分用Misskey文字修飾チートシート">
 <meta name="author" content="Nisuru Haibala">
@@ -14,9 +14,23 @@
 <link rel= "stylesheet" href="./css/prism.css">
     <!-- For highlight codes -->
 <script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
+<!-- ogp start -->
+<meta property="og:description" content="Misskey v13の文字修飾コード一覧">
+<meta property="og:title" content="MFMチートシート | Haibala">
+<meta property="og:image" content="https://haibala.com/data\mfm-cheetsheet/mfm-cheetsheetogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haibala.com/mfm-cheetsheet/mfm-cheetsheetogp.png">
+<!-- ogp end -->
 </head>
 <body class="article">  <!-- 記事なので少し幅広の中央寄せ -->
     <header>
+        <div class="logo">
+        <a class="noeffect" href="https://haibala.com/">
+            <img class="default logo" src="./data/logo/Haibalacom_b.png" alt="Haibala.com logo">
+        </a>
+        </div>
         <p class="updated-date">更新：<time id="modify"></time></p>
             <!-- 更新日の表示 -->
         <h1>MFMチートシート</h1>
@@ -26,8 +40,12 @@
     <ol>
         <li><a href="https://misskey-hub.net/docs/features/mfm.html">Misskey Hub</a></li>
         <li><a href="https://github.com/misskey-dev/mfm.js">github.com/misskey-dev/mfm.js</a></li>
+        <ul>
+            <li><a href="https://github.com/misskey-dev/mfm.js/blob/develop/docs/syntax.md#big">mfm.js/docs/syntax.md</a></li>
+        </ul>
         <li><a href="https://misskey.io/@hakohako_f2/pages/mfm-tech">📃MFMアートのちょっとした技など </a>(by @hakohako_f2@misskey.io)</li>
         <li><a href="https://misskey.io/channels/8gepazrpag">MFMアート部</a></li>
+        <li><a href="https://medemanabu.net/latex/latex-commands-list/">LaTeX入門</a></li>
     </ol>
     <div class="card">
         <h3>TIPS:</h3>
@@ -38,6 +56,7 @@
     <ol id="box">
             <li><span class="roundborder">1</span><a href="#chapter1" class="noeffect gray">強調</a></li>
             <ol class="child_ol">
+                <li><a href="#italic" class="noeffect">斜体</a></li>
                 <li><a href="#bold" class="noeffect">太字</a></li>
                 <li><a href="#size" class="noeffect">サイズ変更</a></li>
                 <li><a href="#font" class="noeffect">フォント指定</a></li>
@@ -55,119 +74,164 @@
             <ol class="child_ol">
                 <li><a href="#plane" class="noeffect">プレーン</a></li>
                 <li><a href="#code" class="noeffect">コード</a></li>
+                <li><a href="#quote" class="noeffect">引用</a></li>
+                <li><a href="#strike" class="noeffect">打ち消し線</a></li>
                 <li><a href="#sparkle" class="noeffect">キラキラ</a></li>
                 <li><a href="#blur" class="noeffect">ぼかし</a></li>
                 <li><a href="#rainbow" class="noeffect">虹色</a></li>
                 <li><a href="#color" class="noeffect">色</a></li>
                 <li><a href="#position" class="noeffect">位置</a></li>
                 <li><a href="#scale" class="noeffect">変形</a></li>
+                <li><a href="#search" class="noeffect">検索</a></li>
+                <li><a href="#other" class="noeffect">その他</a></li>
             </ol>
             <!-- <li><span class="roundborder">4</span><a href="#" class="noeffect gray">v13で使用不可のMFM</a></li> -->
     </ol>
 
     <h2 id="chapter1">1. 強調</h2>  <!-- id内部には # 不要 -->
+    <h3 id="italic">斜体</h3>
+    <pre><code>
+&lt;i&gt;斜め&lt;/i&gt;
+*italic*
+_italic_
+    </code></pre>
+    <p><i>斜め</i><br><i>italic</i><br><i>italic</i></p>
+    <p class="space">日本語が使えるのは1番目のみ。</p>
+    <h4>使用例</h4>
+    <pre><code>
+$[x2 $[bg.color=FFFFFF $[fg.color=FF0000 **<i>気は確かですか</i>**]]]
+    </code></pre>
+    <img class="default" height="30px" src="./data/mfm-cheetsheet/mfm-kihatashikadesuka.png" alt="気は確かですか">
     <h3 id="bold">太字</h3>
     <pre><code>
-    **太字**      
+**太字**      
     </code></pre>
+    <p><b>太字</b></p>
     <h3 id="size">サイズ変更</h3>
     <pre><code> <!-- エスケープすること -->
-    &lt;small&gt;小さく&lt;/small&gt;
-    $[x2 ２倍]
-    $[x3 ３倍]
-    $[x4 ４倍]
+&lt;small&gt;小さく&lt;/small&gt;
+$[x2 ２倍]
+$[x3 ３倍]
+$[x4 ４倍]
     </code></pre>
+    <img class="default" height="256px" src="./data/mfm-cheetsheet/mfm-fontsize.png" alt="MFM サイズ変更">
     <p class="space">
         smallは小さくなるだけでなく色も薄くなる。重ねて使うこともできる。
     </p>
     <pre><code>
-    &lt;small&gt;&lt;small&gt;更に小さく&lt;/small&gt;&lt;/small&gt;
-    $[x2 $[x3 ２倍と３倍]]
+&lt;small&gt;&lt;small&gt;更に小さく&lt;/small&gt;&lt;/small&gt;
+$[x2 $[x3 ２倍と３倍]]
     </code></pre>
     <h3 id="font">フォント指定</h3>
     <pre><code>
-    $[font.serif 明朝体]
-    $[font.monospace 等幅フォント]
-    $[font.cursive 草書体（筆記体）]
-    $[font.fantasy 装飾的]
+$[font.serif 明朝体 Serif]
+$[font.monospace 等幅フォント Monospace]
+$[font.cursive 草書体（筆記体） Cursive]
+$[font.fantasy 装飾的 Fantasy]
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-font.png" alt="MFM フォント指定">
     <p class="space">
         serif以外は環境次第。
     </p>
     <h3 id="center">中央寄せ</h3>
     <pre><code>
-    &lt;center&gt;小さく&lt;/center&gt;
+&lt;center&gt;中央寄せ&lt;/center&gt;
     </code></pre>
+    <img class="default" height="60px" src="./data/mfm-cheetsheet/mfm-centering.png" alt="MFM 中央寄せ">
     <h3 id="flip">反転</h3>
     <pre><code>
-    $[flip 左右反転]
-    $[flip.v 上下反転]
-    $[flip.h,v 上下左右反転]
+$[flip 左右反転]
+$[flip.v 上下反転]
+$[flip.h,v 上下左右反転]
 
-    $[scale.x=-1 scaleを用いてもできる]
+$[scale.x=-1 scaleを用いてもできる]
     </code></pre>
+    <img class="default" height="150px" src="./data/mfm-cheetsheet/mfm-flip.png" alt="MFM 反転">
     <h3 id="deg">角度指定</h3>
     <pre><code>
-    $[rotate 90度傾ける]
-    $[rotate.deg=30 30度右に傾ける]
+$[rotate 90度傾ける]
+$[rotate.deg=30 30度右に傾ける]
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-rotate.png" alt="MFM 角度指定">
 
     <h2 id="chapter2">2. 文字列を動かす</h2>
     <h3 id="rotate">回転</h3>
     <pre><code>
-    $[spin z軸回転(画面の平面上)]
-    $[spin.x x軸回転(縦)]
-    $[spin.y y軸回転(横)]
-    $[spin.z z軸回転]
+$[spin z軸回転(画面の平面上)]
+$[spin.x x軸回転(縦)]
+$[spin.y y軸回転(横)]
+$[spin.z z軸回転]
 
-    $[spin.left 左回転]
-    $[spin.z,speed=10s 10秒間に1回z軸回転]
+$[spin.left 左回転]
+$[spin.z,speed=10s 10秒間に1回z軸回転]
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-spin.gif" alt="MFM 回転">
     <h3 id="zoom">拡大縮小</h3>
     <pre><code>
-    $[tada 拡大縮小]
-    $[jelly ゼリーみたいに潰れる]
-    $[bounce 飛び跳ねたり潰れたり]
+$[tada 拡大縮小]
+***拡大縮小***
+$[jelly ゼリーみたいに潰れる]
+$[bounce 飛び跳ねたり潰れたり]
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-zoom.gif" alt="MFM 拡大縮小">
     <p class="space">
         これらも.speed=XXsを付けると周期が指定できる。
     </p>
     <h3 id="shake">振動</h3>
     <pre><code>
-    $[jump 跳ねる]
-    $[shake ブルブル振動]
-    $[twitch 動き回る]
-    $[twitch.speed=10s 10秒1周期で動き回る]
+$[jump 跳ねる]
+$[shake ブルブル振動]
+$[twitch 動き回る]
+$[twitch.speed=10s 10秒1周期で動き回る]
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-shake.gif" alt="MFM 振動">
 
     <h2 id="chapter3">3. 装飾</h2>
     <h3 id="plane">プレーン</h3>
     <pre><code>
-    &lt;plane&gt;$[x2 文字装飾は無効になる]&lt;plane&gt;
+&lt;plane&gt;$[x2 文字装飾は無効になる]&lt;plane&gt;
     </code></pre>
     <h3 id="code">コード</h3>
     <pre><code>
-    `インライン`
+`インライン`
     </code></pre>
     <pre><code>
-    ```
-    ブロック
-    ```
+```
+ブロック
+```
     </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-code.png" alt="MFM コード">
     <p class="space">
         Markdownと同様。バッククォートという記号で、スマホではキーボードから直接入力できない場合が多いので、頻繁に使う場合はユーザー辞書登録するなど。
     </p>
+    <h3 id="quote">引用</h3>
+    <pre><code>
+&gt; Misskey 
+&gt;Misskey
+&gt;&gt;Misskey
+    </code></pre>
+    <img class="default" height="120px" src="./data/mfm-cheetsheet/mfm-quote.png" alt="MFM 引用">
+
+    <h3 id="strike">打ち消し線</h3>
+    <pre><code>
+~~打ち消し線~~
+&lt;s&gt;打ち消し線&lt;/s&gt;
+    </code></pre>
+    <s>打ち消し線</s>
+
     <h3 id="sparkle">キラキラ</h3>
     <pre><code>
-    $[sparkle キラキラ]
+$[sparkle キラキラ]
     </code></pre>
+    <img class="default" height="30px" src="./data/mfm-cheetsheet/mfm-sparkle.gif" alt="MFM キラキラ">
     <h3 id="blur">ぼかし</h3>
     <pre><code>
-    $[blur えっちなワード]
+$[blur えっちなワード]
     </code></pre>
+    <img class="default" height="30px" src="./data/mfm-cheetsheet/mfm-blur.gif" alt="MFM ぼかし">
     <h3 id="rainbow">虹色</h3>
     <pre><code>
-    $[rainbow 虹色]
+$[rainbow 虹色]
     </code></pre>
     <p class="space">
         <del>元の文字が白色や黒色だと虹色に見えない。</del>
@@ -175,60 +239,92 @@
     <h3 id="color">色</h3>
     <h4>文字色</h4>
     <pre><code>
-    $[fg.color=red 赤（色名指定）]
-    $[fg.color=FF0000 赤（色コード指定）]
+$[fg.color=red 赤（色名指定）]
+$[fg.color=FF0000 赤（色コード指定）]
     </code></pre>
+    <img class="default" height="36px" src="./data/mfm-cheetsheet/mfm-fontcolor.png" alt="MFM 文字色">
     <h4>背景色</h4>
     <pre><code>
-    $[bg.color=red 背景を赤に]
+$[bg.color=red 背景を赤に]
     </code></pre>
+    <img class="default" height="18px" src="./data/mfm-cheetsheet/mfm-backgroundcolor.png" alt="MFM 背景色">
     <p class="space">
         文字列の代わりに<code class="instring">:blank:</code>を入れると色付きの背景だけを表示できる。これを<code class="instring">$[scale ]</code>等と組み合わせると様々な図形が作れる。
     </p>
     <h3 id="position">位置</h3>
     <pre><code>
-    $[position.x=.1,y=.1 (x,y)=(1,1)に移動]
+$[position.x=1,y=1 (x,y)=(1,1)に移動]
     </code></pre>
+    <img class="default" height="54px" src="./data/mfm-cheetsheet/mfm-position.png" alt="MFM 位置">
     <h3 id="scale">変形</h3>
     <pre><code>
-    $[scale.x=2 x方向(横)に2倍]
-    $[scale.y=10 y方向(縦)に10倍]
-    $[scale.x=4,y=4 x,y方向にそれぞれ4倍]←むっちゃ迷惑
+$[scale.x=2 x方向(横)に2倍]
+$[scale.y=4 y方向(縦)に4倍]
+$[scale.x=4,y=4 x,y方向にそれぞれ4倍]←むっちゃ迷惑
     </code></pre>
+    <img class="default" height="108px" src="./data/mfm-cheetsheet/mfm-scale.png" alt="MFM 変形">
     <p class="space">
-        小数点以下のみの場合は0を省略できる。
+        小数点以下のみの場合は0を省略できる。変形すると文字が投稿の外にはみ出るので<code class="instring">$[position ]</code>や<code class="instring">&lt;center&gt;&lt;/center&gt;</code>が必要。
     </p>
     <pre><code>
-    $[scale.x=.5 x方向に0.5倍]
+$[scale.x=.5 x方向に0.5倍]
     </code></pre>
-    <p class="space">
-        これを<code class="instring">$[rotate ]</code>と組み合わせるとふれすとさんのような投稿ができる。
-    </p>
+    <h3 id="search">検索</h3>
     <pre><code>
-    $[position.x=4 $[rotate.deg=-60 $[scale.x=2.23 $[rotate.deg=45  :ablobcatfloofpat: ]]]]
+Misskey 検索
+Misskey search
+Misskey [Search]
+Misskey [検索]
     </code></pre>
+    <img class="default" height="30px" src="./data/mfm-cheetsheet/mfm-search.png" alt="MFM Google検索">
 
-    <h2>4. v13で使用不可のMFM</h2>
-    <h3>斜体</h3>
+    <h3 id="other">その他</h3>
+    <details>
+    <h4>メンション</h4>
     <pre><code>
-    *斜体*      
+@haibala
+@haibala@misskey.io
     </code></pre>
+    <h4>ハッシュタグ</h4>
+    <pre><code>
+#NowPlaying
+    </code></pre>
+    <h4>リンク</h4>
+    <pre><code>
+[こちら](https://misskey.io/)
+?[こちら](https://misskey.io/)
+    </code></pre>
+    <ul>
+        <li class="parallel"><figure><img class="default" height="108px" src="./data/mfm-cheetsheet/mfm-link1.png" alt="MFM リンク(プレビュー付)"><figcaption>リンク(プレビュー付)</figcaption></figure></li>
+        <li class="parallel"><figure><img class="default" height="18px" src="./data/mfm-cheetsheet/mfm-link2.png" alt="MFM リンク(プレビュー無し)"><figcaption>リンク(プレビュー無し)</figcaption></figure></li>
+    </ul>
+    <h4>カスタム絵文字</h4>
+    <pre><code>
+:ablobcatfloofpat:
+    </code></pre>
+    <img class="default" height="18px" src="./data/mfm-cheetsheet/mfm-customemoji.gif" alt="MFM カスタム絵文字">
+    <p class="space">チャット機能(廃止予定)では、他のサーバーの絵文字は表示されない。</p>
+    </details>
+    
+    <h2>4. v13で使えないMFM</h2>
     <p class="space">
-        Markdownのそれと同じ機能。環境に依るが、基本的に日本語は斜体にならない。
+        一部。改造されたフォークやバージョンされていない鯖で使える。連合しているv13鯖の相手からは見えない。
     </p>
-
-    <div class="card">
-    <p class="space">
-        更新中<!-- KaTeXとKaTeX廃止に伴って追加されたMFMを追加予定。情報は<code class="instring">@haibala@mk.yopo.work</code>までお願いします。 -->
-    </p>
-    </div>
+    <details>
+    <h3>KaTeX系</h3>
+    <pre><code>
+\(\KaTeX\)
+\(x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\\\overset{みすきー}{Misskey}\)
+    </code></pre>
+    <img class="default" height="72px" src="./data/mfm-cheetsheet/mfm-KaTeX.png" alt="MFM KaTeX">
+    </details>
 
     <ul class="square linkbutton"><!-- AddToAny Share button -->
         <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a class="a2a_button_facebook"></a>
             <a class="a2a_button_twitter"></a>
             <a class="a2a_button_mastodon">
-                <img src="https://icongr.am/simple/mastodon.svg?color=06559d" border="0" alt="Mastodon" width="32">
+                <img class="default" src="https://icongr.am/simple/mastodon.svg?color=06559d" border="0" alt="Mastodon" width="32">
             </a>
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
         </div>
@@ -251,6 +347,11 @@
             </a>
         </p>
     </footer>
+    <!-- Easy darkmode js -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      new Darkmode().showWidget();
+    </script>
     <script>
 
         /* 更新日の取得 */

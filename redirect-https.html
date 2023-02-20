@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
-<title>Cloudflareでhttpsにリダイレクトする方法｜Haibala</title>
+<title>Cloudflareでhttpsにリダイレクトする方法 | Haibala</title>
 <meta name="description" content="Cloudflareのページルールを使ってhttpsにリダイレクトさせる方法。">
 <meta name="author" content="Nisuru Haibala">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,15 @@
 <link rel= "stylesheet" href="./css/prism.css">
     <!-- For highlight codes -->
 <script src="https://kit.fontawesome.com/7f0fbb83bf.js" crossorigin="anonymous"></script>
+<!-- ogp start -->
+<meta property="og:description" content="Github Pages等で作成したウェブサイトをCloudflareのページルールを使ってhttpsにリダイレクトさせる方法">
+<meta property="og:title" content="Cloudflareでhttpsにリダイレクトする方法 | Haibala">
+<meta property="og:image" content="https://haibala.com\data\redirect-https/ogp-redirect-https.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haibala.com/redirect-https.html">
+<!-- ogp end -->
 </head>
 <body class="article">  <!-- 記事なので少し幅広の中央寄せ -->
     <header>
@@ -33,7 +42,7 @@
 
     <h3>1. ルール＞ページルールを開く</h3>
     <p class="space">
-        <a href="https://dash.cloudflare.com/">Cloudflare</a>を開いて、リダイレクトを設定したいドメインを選びます。（写真の場合は<code>haibala.com</code>）
+        <a href="https://dash.cloudflare.com/">Cloudflare</a>を開いて、リダイレクトを設定したいドメインを選びます。（写真の場合は<code class="instring">haibala.com</code>）
     </p>
     <img src="data/redirect-https/cloudflare_top.png" alt="リダイレクトを設定したいドメインを選ぶ" width="500px">
     <p class="space">
@@ -45,7 +54,7 @@
     </p>
     <h3>2. ページルールを作成する</h3>
     <p class="space">
-        URLには<code>http://</code>と自分のドメインを組み合わせたものを入力します。設定の選択から"URLの転送"を選び、転送先URLに<code>https://</code>と自分のドメインを組み合わせたものを入力します。
+        URLには<code class="instring">http://</code>と自分のドメインを組み合わせたものを入力します。設定の選択から"URLの転送"を選び、転送先URLに<code class="instring">https://</code>と自分のドメインを組み合わせたものを入力します。
     </p>
     <img src="data/redirect-https/cloudflare_rulessettings.png" alt="ページルールを作成する" width="500px">
     <p class="space">
@@ -53,7 +62,7 @@
     </p>
     <h3>3. リダイレクトされているか確かめる</h3>
     <p class="space">
-        これで設定は完了したので、適当なブラウザでアドレスバーに<code>http://</code>+<code>(自分のドメイン)</code>を入力して、自動的に<code>https://...</code>に変わるかを確かめます。
+        これで設定は完了したので、適当なブラウザでアドレスバーに<code class="instring">http://</code>+<code class="instring">(自分のドメイン)</code>を入力して、自動的に<code class="instring">https://...</code>に変わるかを確かめます。
     </p>
 
     <!-- 備考ってこの場合h2とh3のどちらにするか迷う -->
