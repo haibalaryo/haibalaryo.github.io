@@ -17,12 +17,15 @@ details {
 }
 figure{text-align:center;}
 figcaption{color:grey;font:10px ;}
+img{
+    max-width: 832px;
+    max-height: 832px;
+}
 img:not(.default){
+    width: 80%; /* あまり細いと小型端末で見えづらい */
     margin: auto;
     width: 88%; /* スマホで表示時に画像のはみ出しを防止 *//* bodyより大きいとoverflow */
-    max-width: 960px;
     height:auto;
-    max-height: 832px;
 }
 img.logo{
     width: 64%;
@@ -115,8 +118,8 @@ a.gray{ /* 目次用 */
     font-family: 'migmixRegular';
 }
 code{
-    width: 90%; /* あまり細いと小型端末で見えづらい */
-    max-width: 960px;
+    width: 80%; /* あまり細いと小型端末で見えづらい */
+    max-width: 832px;
     display: inline-block;
     font-family: 'FiraCodeRegular','migmixRegular';
     font-size: smaller;
@@ -133,15 +136,16 @@ code.instring{
     overflow-x: auto;
 }
 div.card{
-    margin: 15px;
-    width:85%;
-    max-width: 832px;
+    margin: 5px auto;
+    width: 512px;
+    max-width: 90%;
     height:auto;
-    padding: 10px 15px;
+    padding: 5px 5px;
     background-color: #ffffff;
     box-shadow: 3px 3px 3px 1px #a1b1d1;
     box-sizing: border-box;
     border-radius: 1em;
+    text-align:left;
 }
 div.logo{
     padding: 2em 2em;
@@ -162,7 +166,8 @@ li.parallel {   /* align images */
     }
 #box {
     margin: auto;
-    width: 320px;
+    width: 512px;
+    max-width: 90%;
     height: auto;
     padding: 10px;
     background-color: #ffffff;
